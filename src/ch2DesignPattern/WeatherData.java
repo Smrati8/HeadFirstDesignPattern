@@ -1,23 +1,43 @@
 package ch2DesignPattern;
 
-public class WeatherData {
+import java.util.ArrayList;
 
-    public float getTemperature(){
-        return 0;
+public class WeatherData implements Subject{
+    private ArrayList<Observer> observersList;
+    private float temp;
+    private float humidity;
+    private float pressure;
+
+    WeatherData() {
+        observersList = new ArrayList<Observer>();
     }
 
-    public float getHumidity() {
-        return 0;
+    public void registeredObserver(Observer o) {
+        observersList.add(o);
     }
 
-    public float getPressure() {
-        return 0;
+    public void removeObserver(Observer o) {
+        int index = observersList.indexOf(o);
+        if(index >= 0) {
+            observersList.remove(index);
+        }
     }
+
+    public void notifyObserver() {
+        for(Observer obs : observersList) {
+            obs.update(this.temp, this.humidity, this.pressure);
+        }
+    }
+
 
     public void measurementChanged() {
-        float temperature = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
+        notifyObserver();
+    }
 
+    public void setMeasurements(float temp, float humidity, float pressure) {
+        this.temp = temp;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementChanged();
     }
 }
