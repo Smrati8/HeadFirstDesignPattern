@@ -1,3 +1,5 @@
+package ch1DesignPattern;
+
 public abstract class Duck {
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;

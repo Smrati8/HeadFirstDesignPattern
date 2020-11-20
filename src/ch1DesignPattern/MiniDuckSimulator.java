@@ -1,3 +1,5 @@
+package ch1DesignPattern;
+
 public class MiniDuckSimulator {
     public static void main(String[] arg) {
         Duck mallard = new MallardDuck();

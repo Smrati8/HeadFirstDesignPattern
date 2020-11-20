@@ -1,3 +1,5 @@
+package ch1DesignPattern;
+
 public class FlyWithWings implements FlyBehavior{
     @Override
     public void fly() {

@@ -1,3 +1,5 @@
+package ch1DesignPattern;
+
 public class DecoyDuck extends Duck{
     public void quack(){
 
@@ -8,6 +10,6 @@ public class DecoyDuck extends Duck{
     }
     @Override
     public void display(){
-        System.out.println("Decoy Duck");
+        System.out.println("Decoy ch1DesignPattern.Duck");
     }
 }
