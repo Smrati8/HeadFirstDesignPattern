@@ -19,8 +19,5 @@ public class WeatherData {
         float humidity = getHumidity();
         float pressure = getPressure();
 
-        currentConditionsDisplay.update(temperature, humidity, pressure);
-        statisticsDisplay.update(temperature, humidity, pressure);
-        forecastDisplay.update(temperature, humidity, pressure);
     }
 }
