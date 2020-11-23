@@ -7,6 +7,7 @@
 * Favor composition over inheritance.
 * Strive for loosely coupled designs for objects that interact.
 * Classes should be open for extention but closed for modification.
+* Depend upon abstraction. Do not depend upon concrete classes.
 
 
 ## Object Oriented Design Pattern
