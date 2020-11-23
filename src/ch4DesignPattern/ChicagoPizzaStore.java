@@ -2,7 +2,7 @@ package ch4DesignPattern;
 
 public class ChicagoPizzaStore extends PizzaStore{
     Pizza pizza;
-    PizzaIngredientFactory ingredientFactory;
+    PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
     public Pizza createPizza(String type) {
         if(type.equals("Cheese")) {
             pizza = new CheesePizza(ingredientFactory);

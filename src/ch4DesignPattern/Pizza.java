@@ -31,4 +31,33 @@ abstract public class Pizza {
     public void setName(String name){
         this.name = name;
     }
+
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("---- " + name + " ----\n");
+        if (dough != null) {
+            result.append(dough);
+            result.append("\n");
+        }
+        if (sauce != null) {
+            result.append(sauce);
+            result.append("\n");
+        }
+        if (cheese != null) {
+            result.append(cheese);
+            result.append("\n");
+        }
+//        if (veggies.size() > 0) {
+//            for (String veg : veggies) {
+//                result.append(veg);
+//                result.append(" ");
+//            }
+//            result.append("\n");
+//        }
+        if (clam != null) {
+            result.append(clam);
+            result.append("\n");
+        }
+        return result.toString();
+    }
 }

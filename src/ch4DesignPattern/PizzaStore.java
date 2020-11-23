@@ -1,7 +1,8 @@
 package ch4DesignPattern;
 
-abstract public class PizzaStore {
-    public abstract Pizza createPizza(String type);
+public abstract class PizzaStore {
+
+    protected abstract Pizza createPizza(String item);
 
     public Pizza orderPizza(String type) {
         Pizza pizza = createPizza(type);
@@ -9,6 +10,7 @@ abstract public class PizzaStore {
         pizza.bake();
         pizza.cut();
         pizza.box();
+        System.out.println(pizza.toString());
         return pizza;
     }
 }

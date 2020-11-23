@@ -1,7 +1,7 @@
 package ch4DesignPattern;
 
 public class ThinCrustDough implements Dough{
-    public String createDough(){
+    public String create(){
         return "Thin Crust Dough";
     }
 }
