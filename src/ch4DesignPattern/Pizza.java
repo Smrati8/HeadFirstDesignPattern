@@ -1,22 +1,16 @@
 package ch4DesignPattern;
 
-import java.util.ArrayList;
+import java.util.*;
 
 abstract public class Pizza {
     String name;
-    String dough;
-    String sauce;
-    ArrayList<String> toppings = new ArrayList<>();
+    Dough dough;
+    Sauce sauce;
+    Cheese cheese;
+    Clams clam;
+    List<String> veggies;
 
-    void prepare() {
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough " + dough);
-        System.out.println("Adding Sauce " + sauce);
-        System.out.println("Adding toppings: ");
-        for(String topping : toppings) {
-            System.out.println("  " + topping);
-        }
-    }
+    abstract void prepare();
 
     void bake() {
         System.out.println("Bake for 25 minutes at 350");
@@ -32,5 +26,9 @@ abstract public class Pizza {
 
     public String getName(){
         return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 }

@@ -1,15 +1,22 @@
 package ch4DesignPattern;
 
 public class NYPizzaStore extends PizzaStore{
+    Pizza pizza;
+    PizzaIngredientFactory ingredientFactory;
     public Pizza createPizza(String type) {
         if(type.equals("Cheese")) {
-            return new NyStyleCheesePizza();
+            pizza = new CheesePizza(ingredientFactory);
+            pizza.setName("New York Style Cheese Pizza");
         } else if(type.equals("Veggie")) {
-            return new NYStyleVeggiePizza();
+            pizza = new VeggiePizza(ingredientFactory);
+            pizza.setName("New York Style Veggie Pizza");
         } else if(type.equals("Clam")) {
-            return new NYStyleClamPizza();
+            pizza = new ClamPizza(ingredientFactory);
+            pizza.setName("New York Style Clam Pizza");
         } else if(type.equals("Pepperoni")){
-            return new NYStylePepperoniPizza();
-        } else return null;
+            pizza = new PepperoniPiza(ingredientFactory);
+            pizza.setName("New York Style Pepperoni Pizza");
+        } 
+        return pizza;
     }
 }
