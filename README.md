@@ -8,6 +8,9 @@
 * Strive for loosely coupled designs for objects that interact.
 * Classes should be open for extention but closed for modification.
 * Depend upon abstraction. Do not depend upon concrete classes.
+  * No variable should hold a reference to concrete class
+  * No class should derive from concrete class
+  * No method should override an implemented method of any of its base class.
 
 
 ## Object Oriented Design Pattern
