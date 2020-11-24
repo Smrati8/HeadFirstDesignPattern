@@ -18,3 +18,4 @@
 2. **Observer Pattern:** The Observer pattern defines a one-to-many dependency between objects so that when one object changes state all of its dependencies are notified and updated automatically.
 3. **Decorator Pattern:** The Decorator pattern attaches additionaly responsibilty to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 4. **Factory Method Pattern:** The Factory Method Pattern defines an interface for creating an object, but lets subclass decide which class to instantiate. Factory method lets a class defer instantiation to subclasses.
+5. **Abstract Factory Pattern:** The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
